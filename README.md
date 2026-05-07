@@ -5,104 +5,108 @@
 [![Discussions](https://img.shields.io/badge/Join-the%20Discussion-2D9F2D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/flick9000/winscript/discussions)
 [![Ko-Fi](https://shields.io/badge/ko--fi-Donate-13c3ff?logo=kofi&style=for-the-badge)](https://ko-fi.com/flick9000)
 
-WinScript is a powerful, simple to use & lightweight open-source tool designed to improve and customize your Windows experience. It offers a range of features, including debloating, privacy enhancement, performance optimization, and streamlined app installation.
+WinScript — это мощный, простой в использовании и легковесный инструмент с открытым исходным кодом, предназначенный для улучшения и настройки вашего опыта работы с Windows. Он предлагает ряд функций, включая деблотинг, повышение конфиденциальности, оптимизацию производительности и упрощенную установку приложений.
+
 <br>
 
 ![App Screenshot](/website/public/winscript.webp)
 
-## Features
+## Возможности
 
-### 🧹 Debloat
+### 🧹 Деблотинг (Debloat)
 
-WinScript allows you to remove any pre-installed bloatware and unnecessary component from Windows. You can uninstall Microsoft Store, OneDrive, CoPilot, debloat or remove Microsoft Edge, disable Widgets & Taskbar Widgets, disable Windows Features such as Recall or Consumer Features & many more.
+WinScript позволяет удалить любые предустановленные "блотварь" (ненужные приложения) и ненужные компоненты из Windows. Вы можете удалить Microsoft Store, OneDrive, CoPilot, деблотить или удалить Microsoft Edge, отключить виджеты и виджеты панели задач, отключить такие функции Windows, как Recall или Consumer Features, и многое другое.
 
-### 🔒 Privacy
+### 🔒 Конфиденциальность
 
-You can disable app access to sensitive data, prevent background syncing of themes and passwords, and stop usage tracking like activity feeds, screen recording, and location-based services. The Telemetry section allows you to shut down Microsoft’s data collection of Windows, Office, updates, search, and feedback. You can disable 3rd-party apps data collection (Adobe, VS Code, Google, Nvidia etc), disable cloud-based speech recognition, DRM connectivity, and biometric services & much more.
+Вы можете отключить доступ приложений к конфиденциальным данным, предотвратить фоновую синхронизацию тем и паролей, а также остановить отслеживание использования, такое как лента активности, запись экрана и сервисы, основанные на определении местоположения. Раздел Телеметрия позволяет отключить сбор данных Microsoft об использовании Windows, Office, обновлений, поиска и отзывов. Вы можете отключить сбор данных сторонними приложениями (Adobe, VS Code, Google, Nvidia и др.), отключить облачное распознавание речи, подключение DRM и биометрические сервисы, и многое другое.
 
-### ⚡ Performance
+### ⚡ Производительность
 
-You can enable the Ultimate Performance power plan, set background services to manual startup, reduce mouse input delays, and disable features like Superfetch, HAGS, Storage Sense, Windows Search Indexing, and Hibernation. It also allows you to fine-tune security settings for better performance by limiting Windows Defender’s CPU usage, disabling Core Isolation & more.
+Вы можете включить план электропитания "Максимальная производительность", перевести фоновые службы в ручной запуск, уменьшить задержки ввода мыши и отключить такие функции, как Superfetch, HAGS, Storage Sense, индексацию поиска Windows и гибернацию. Это также позволяет вам настраивать параметры безопасности для повышения производительности, ограничивая использование ЦП Защитником Windows, отключая изоляцию ядра (Core Isolation) и многое другое.
 
-### 📦 App Installer
+### 📦 Установщик приложений
 
-The Browse Apps section in WinScript makes it easy to bulk install all your essential software in just a few clicks. Choose from a list of popular apps—browsers, utilities, dev tools, media players, and more, and WinScript will generate a script to install them automatically using your preferred package manager: Chocolatey or Winget.
+Раздел "Обзор приложений" (Browse Apps) в WinScript позволяет легко устанавливать все ваши необходимые программы в несколько кликов. Выберите из списка популярных приложений — браузеров, утилит, инструментов разработчика, медиаплееров и других — и WinScript сгенерирует сценарий для их автоматической установки с использованием вашего предпочтительного менеджера пакетов: Chocolatey или Winget.
 
-## Usage
+## Использование
 
-🖥️ **Launch Command**:
+🖥️ **Команда для запуска**:
 
 ```ps1
 irm "https://winscript.cc/irm" | iex
 ```
 
-🖥️ **Via Winget**:
+🖥️ **Через Winget**:
 
-```ps1
+```ps1 
 winget install winscript
 ```
 
-⚙️ **Import Configuration**:
+⚙️ **Импорт конфигурации**:
 
-Use the -i flag to import a configuration file when launching the app.
+Используйте флаг -i для импорта файла конфигурации при запуске приложения.
 
-```ps1
+```ps1 
 .\winscript.exe -i "C:\path\to\config.json"
 ```
 
-## Build
+## Сборка
 
-### 📋 Prerequisites
+### 📋 Необходимые компоненты
 
 - NodeJS (LTS)
 
-```ps1
+```ps1 
 winget install --id OpenJS.NodeJS.LTS
 ```
 
 - Rust & Cargo
 
-```ps1
+```ps1 
 winget install --id Rustlang.Rustup
 ```
 
-### 🛠️ How to build
+### 🛠️ Как собрать
 
-- Clone the repository
+- Клонируйте репозиторий
 
 ```ps1
 git clone https://github.com/flick9000/winscript.git
+```
+
+```ps1
 cd winscript/app
 ```
 
-- Install dependencies
+- Установите зависимости
 
 ```ps1
 npm install
 ```
 
-- Build the app
+- Соберите приложение
 
 ```ps1
 npm run tauri build
 ```
 
-After building, the compiled executable will be available inside the src-tauri/target/release directory.
+После сборки скомпилированный исполняемый файл будет находиться в каталоге `src-tauri/target/release`.
 
-## Support
+## Поддержка
 
-### 👷 Contributing
+### 👷 Участие в разработке
 
-Contributions are welcome! Fork the repository and create a pull request with your changes.
+Вклад приветствуется! Форкните репозиторий и создайте pull request с вашими изменениями.
 
-### ⭐ Star
+### ⭐ Звезда
 
-Feel free to leave a star and help the project reach more people!
+Не стесняйтесь поставить звезду, чтобы помочь проекту привлечь больше пользователей!
 
-### ☕ Donate
+### ☕ Пожертвование
 
-If you find this project helpful, consider supporting it by [buying me a coffee!](https://ko-fi.com/flick9000)
+Если вы находите этот проект полезным, рассмотрите возможность поддержки, [купив мне кофе](https://ko-fi.com/flick9000)!
 
-## License
+## Лицензия
 
-📒 This project is licensed under the GPL v3 License. See the [LICENSE](LICENSE) file for more details.
+📒 Этот проект лицензирован в соответствии с лицензией GPL v3. См. файл [LICENSE](LICENSE) для получения более подробной информации.
